@@ -1,0 +1,30 @@
+<!-- Всесто #rec151318301 поставить id блока (zero) -->
+
+<style>
+#rec151318301 {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  transition: all .3s ease;
+  z-index:999999;
+}
+#rec151318301.out {
+  transform: translateY(-100%);
+}
+</style>
+
+<script>
+scrollPrev = 0;
+
+$(window).scroll(function() {
+    var scrolled = $(window).scrollTop();
+ 
+    if ( scrolled > 100 && scrolled > scrollPrev ) {
+        $("#rec151318301").addClass('out');
+    } else {
+        $("#rec151318301").removeClass('out');
+    }
+    scrollPrev = scrolled;
+});
+</script>
+<!-- Creator by Vlad Tyminskyi -->
